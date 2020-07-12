@@ -1,0 +1,23 @@
+
+<div class="container-bg">
+    <div class="container">
+      
+            <div *ngIf="tvshow" class="wrapper" else no_result>
+          
+                <div class="row ">
+                 
+                    <div *ngFor="let tv of tvshow.results | slice:0:1500" class=" col-sm-3 col-md-3 col-lg-3 col-xl-3 p-0 m-0   data-div">
+                        <a routerLink="/detail/{{tv.id}}">
+                            <img src="https://image.tmdb.org/t/p/w500/{{tv.poster_path}}" alt="poster" max-width="150px"
+                                min-height="50px" class="img-fluid" />
+                            <div class="movie-list-descrip">
+                                <span> <span *ngIf="tv.first_air_date">{{tv.first_air_date | date: 'y'}}</span> {{ tv.release_date | date: "y"}} | votes: {{tv.vote_count}}</span>
+                            </div>
+                        </a>
+                    </div>
+             
+                </div>
+            </div>
+            <ng-template #no_result>No result found</ng-template>
+        </div>
+    </div>
