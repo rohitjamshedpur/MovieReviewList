@@ -22,7 +22,7 @@
     "bootstrap": "^4.5.0",
     "favicon": "0.0.2",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-spinner": "^9.0.2",
     "popper.js": "^1.16.1",
     "rxjs": "~6.5.4",
